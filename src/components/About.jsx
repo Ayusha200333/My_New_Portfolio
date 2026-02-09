@@ -1,4 +1,6 @@
 import { motion } from 'framer-motion';
+import { Link } from 'react-router-dom';
+
 
 const About = () => {
   return (
@@ -308,32 +310,32 @@ const About = () => {
           </motion.div>
         </div>
 
-        {/* Navigation Button */}
-        <motion.div
-          initial={{ opacity: 0, y: 20 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6, delay: 0.4 }}
-          className="text-center mt-12"
-        >
-          <a 
-            href="#skills"
-            className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
-          >
-            <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-            
-            <div className="relative z-10 flex items-center gap-2">
-              <span>View My Education</span>
-              <motion.span 
-                className="text-xl"
-                animate={{ x: [0, 5, 0] }}
-                transition={{ duration: 2, repeat: Infinity }}
-              >
-                →
-              </motion.span>
-            </div>
-          </a>
-        </motion.div>
+{/* Navigation Button */}
+<motion.div
+  initial={{ opacity: 0, y: 20 }}
+  whileInView={{ opacity: 1, y: 0 }}
+  viewport={{ once: true }}
+  transition={{ duration: 0.6, delay: 0.4 }}
+  className="text-center mt-12"
+>
+  <Link 
+    to="/education"  // href වෙනුවට to භාවිතා කරන්න
+    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
+  >
+    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+    
+    <div className="relative z-10 flex items-center gap-2">
+      <span>View My Education</span>
+      <motion.span 
+        className="text-xl"
+        animate={{ x: [0, 5, 0] }}
+        transition={{ duration: 2, repeat: Infinity }}
+      >
+        →
+      </motion.span>
+    </div>
+  </Link>
+</motion.div>
       </div>
     </section>
   );
