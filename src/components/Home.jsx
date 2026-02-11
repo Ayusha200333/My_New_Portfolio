@@ -38,7 +38,6 @@ const Home = () => {
       const currentRole = roles[currentRoleIndex];
       
       if (!isDeleting && currentText === currentRole) {
-        // Wait for 2 seconds after typing complete
         setTimeout(() => setIsDeleting(true), 2000);
         return;
       }
@@ -53,10 +52,10 @@ const Home = () => {
       const timeout = setTimeout(() => {
         if (isDeleting) {
           setCurrentText(currentRole.substring(0, currentText.length - 1));
-          setTypingSpeed(100); // Faster when deleting
+          setTypingSpeed(100); 
         } else {
           setCurrentText(currentRole.substring(0, currentText.length + 1));
-          setTypingSpeed(150); // Normal speed when typing
+          setTypingSpeed(150); 
         }
       }, typingSpeed);
       
@@ -70,7 +69,6 @@ const Home = () => {
     <section id="home" className="min-h-screen flex items-center pt-16">
       <div className="section-container">
         <div className="grid md:grid-cols-2 gap-12 items-center">
-          {/* Left Column - Text Content */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
@@ -134,7 +132,6 @@ const Home = () => {
               </a>
             </motion.div>
             
-            {/* Social Links with Updated Links */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -162,7 +159,6 @@ const Home = () => {
             </motion.div>
           </motion.div>
           
-          {/* Right Column - Profile Image Only with Enhanced Animations */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
@@ -170,7 +166,6 @@ const Home = () => {
             className="relative flex justify-center items-center"
           >
             <div className="relative w-96 h-96">
-              {/* Animated Background Blobs */}
               <motion.div
                 animate={{ 
                   x: [0, 30, 0],
@@ -200,7 +195,6 @@ const Home = () => {
                 className="absolute bottom-10 right-10 w-64 h-64 bg-gradient-to-r from-purple-400 to-pink-400 rounded-full mix-blend-multiply filter blur-3xl opacity-30"
               />
               
-              {/* Animated Rings Around the Image */}
               <motion.div
                 animate={{ rotate: 360 }}
                 transition={{ 
@@ -221,7 +215,6 @@ const Home = () => {
                 className="absolute -ins-12 border-2 border-dotted border-purple-300/50 rounded-full"
               />
               
-              {/* Floating Dots Animation */}
               <motion.div
                 animate={{ 
                   y: [0, -40, 0],
@@ -277,12 +270,10 @@ const Home = () => {
                 className="absolute top-1/2 -left-6 w-8 h-8 bg-gradient-to-r from-orange-500 to-red-500 rounded-full shadow-lg"
               />
               
-              {/* Main Profile Image Container with Glow Effect */}
               <motion.div
                 whileHover={{ scale: 1.05 }}
                 className="relative w-full h-full"
               >
-                {/* Glow Effect Behind Image */}
                 <motion.div
                   animate={{ 
                     opacity: [0.3, 0.6, 0.3],
@@ -296,7 +287,6 @@ const Home = () => {
                   className="absolute inset-0 bg-gradient-to-r from-blue-500 via-purple-500 to-pink-500 rounded-full blur-xl"
                 />
                 
-                {/* Profile Image with Floating Animation */}
                 <motion.div
                   animate={{ y: [0, -15, 0] }}
                   transition={{ 
@@ -316,10 +306,8 @@ const Home = () => {
                     }}
                   />
                   
-                  {/* Gradient Overlay for Depth */}
                   <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-transparent"></div>
                   
-                  {/* Animated Border Effect */}
                   <motion.div
                     animate={{ rotate: 360 }}
                     transition={{ 
@@ -334,7 +322,6 @@ const Home = () => {
                   />
                 </motion.div>
                 
-                {/* Pulse Effect */}
                 <motion.div
                   animate={{ 
                     scale: [1, 1.2, 1],

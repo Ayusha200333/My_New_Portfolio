@@ -6,7 +6,6 @@ const About = () => {
   return (
     <section id="about" className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="section-container">
-        {/* Header Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -22,9 +21,7 @@ const About = () => {
           </p>
         </motion.div>
 
-        {/* Main Content Grid */}
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12 items-stretch">
-          {/* Left Column - Introduction */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -106,7 +103,6 @@ const About = () => {
             </div>
           </motion.div>
 
-          {/* Right Column - Technologies */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -149,7 +145,6 @@ const About = () => {
                   <h3 className="text-2xl font-bold mb-8 text-gray-800">Technologies & Tools</h3>
 
                   <div className="space-y-8">
-                    {/* Frontend Technologies */}
                     <div>
                       <h4 className="text-lg font-semibold text-gray-700 mb-4">Frontend</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -189,7 +184,6 @@ const About = () => {
                       </div>
                     </div>
 
-                    {/* Backend Technologies */}
                     <div>
                       <h4 className="text-lg font-semibold text-gray-700 mb-4">Backend</h4>
                       <div className="grid grid-cols-2 sm:grid-cols-3 gap-3">
@@ -227,7 +221,6 @@ const About = () => {
                       </div>
                     </div>
 
-                    {/* Database & Design */}
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                       <div>
                         <h4 className="text-lg font-semibold text-gray-700 mb-4">Database</h4>
@@ -310,35 +303,34 @@ const About = () => {
           </motion.div>
         </div>
 
-{/* Navigation Button */}
-<motion.div
-  initial={{ opacity: 0, y: 20 }}
-  whileInView={{ opacity: 1, y: 0 }}
-  viewport={{ once: true }}
-  transition={{ duration: 0.6, delay: 0.4 }}
-  className="text-center mt-12"
->
-  <Link 
-    to="/education"  // href වෙනුවට to භාවිතා කරන්න
-    className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
-  >
-    <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-    
-    <div className="relative z-10 flex items-center gap-2">
-      <span>View My Education</span>
-      <motion.span 
-        className="text-xl"
-        animate={{ x: [0, 5, 0] }}
-        transition={{ duration: 2, repeat: Infinity }}
-      >
-        →
-      </motion.span>
-    </div>
-  </Link>
-</motion.div>
-      </div>
-    </section>
-  );
-};
+        <motion.div
+          initial={{ opacity: 0, y: 20 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.4 }}
+          className="text-center mt-12"
+        >
+        <Link 
+          to="/education"  
+          className="inline-flex items-center gap-2 px-6 py-3 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg transition-all duration-300 group relative overflow-hidden"
+        >
+          <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
+          
+          <div className="relative z-10 flex items-center gap-2">
+            <span>View My Education</span>
+            <motion.span 
+              className="text-xl"
+              animate={{ x: [0, 5, 0] }}
+              transition={{ duration: 2, repeat: Infinity }}
+            >
+              →
+            </motion.span>
+          </div>
+        </Link>
+      </motion.div>
+            </div>
+          </section>
+        );
+      };
 
 export default About;

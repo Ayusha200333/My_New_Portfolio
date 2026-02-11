@@ -51,11 +51,9 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // In a real app, you would send this data to a server
     console.log('Form submitted:', formData);
     setIsSubmitted(true);
     
-    // Reset form after 3 seconds
     setTimeout(() => {
       setIsSubmitted(false);
       setFormData({
@@ -69,7 +67,6 @@ const Contact = () => {
 
   return (
     <section id="contact" className="py-16 md:py-20 bg-gradient-to-b from-blue-50 to-white relative overflow-hidden">
-      {/* Animated background elements */}
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute -top-40 -right-40 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-blue-200 to-purple-200 rounded-full opacity-30 blur-3xl" />
         <div className="absolute -bottom-40 -left-40 w-64 h-64 md:w-80 md:h-80 bg-gradient-to-br from-purple-200 to-pink-200 rounded-full opacity-30 blur-3xl" />
@@ -90,7 +87,6 @@ const Contact = () => {
         </motion.div>
         
         <div className="grid lg:grid-cols-2 gap-8 md:gap-12">
-          {/* Contact Information */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -113,7 +109,6 @@ const Contact = () => {
                   className="block group"
                 >
                   <div className="relative bg-white/80 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-md md:shadow-lg p-4 md:p-5 border border-white/20 overflow-hidden hover:shadow-lg md:hover:shadow-xl transition-all duration-300">
-                    {/* Animated gradient border */}
                     <motion.div 
                       className="absolute inset-0 rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
                       style={{
@@ -155,7 +150,6 @@ const Contact = () => {
               ))}
             </div>
             
-            {/* Social Links Section */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -203,7 +197,6 @@ const Contact = () => {
               </motion.p>
             </motion.div>
             
-            {/* Response Time Info */}
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               whileInView={{ opacity: 1, y: 0 }}
@@ -220,7 +213,6 @@ const Contact = () => {
             </motion.div>
           </motion.div>
           
-          {/* Contact Form */}
           <motion.div
             initial={{ opacity: 0, x: 50 }}
             whileInView={{ opacity: 1, x: 0 }}
@@ -228,7 +220,6 @@ const Contact = () => {
             transition={{ duration: 0.6 }}
           >
             <div className="relative group">
-              {/* Floating background effect */}
               <motion.div 
                 className="absolute inset-0 bg-gradient-to-r from-blue-500/5 to-purple-500/5 rounded-2xl md:rounded-3xl blur-lg md:blur-xl group-hover:blur-xl md:group-hover:blur-2xl transition-all duration-500"
                 animate={{
@@ -242,7 +233,6 @@ const Contact = () => {
               />
               
               <div className="relative bg-white/90 backdrop-blur-sm rounded-xl md:rounded-2xl shadow-lg md:shadow-xl p-5 md:p-7 border border-white/20 overflow-hidden">
-                {/* Animated border effect */}
                 <motion.div 
                   className="absolute inset-0 rounded-xl md:rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-700"
                   style={{
@@ -353,7 +343,6 @@ const Contact = () => {
                           type="submit"
                           className="w-full flex items-center justify-center gap-2 md:gap-3 px-6 md:px-8 py-3 md:py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-lg md:rounded-xl font-semibold hover:shadow-lg transition-all duration-300 group relative overflow-hidden text-sm md:text-base"
                         >
-                          {/* Button hover effect */}
                           <div className="absolute inset-0 bg-gradient-to-r from-purple-600 to-blue-600 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
                           
                           <div className="relative z-10 flex items-center gap-2 md:gap-3">
