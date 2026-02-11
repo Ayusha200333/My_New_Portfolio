@@ -55,7 +55,7 @@ const Navbar = ({ showHomeButton = false }) => {
                   transition={{ duration: 4, repeat: Infinity, ease: "easeInOut" }}
                 />
                 <motion.div 
-                  className="relative p-2 bg-gradient-to-br from-blue-600 to-purple-600 rounded-lg shadow-lg"
+                  className="relative p-2 bg-gradient-to-br from-blue-600 to-purple-600 rounded-2xl shadow-lg"
                   whileHover={{ rotate: 10, scale: 1.1 }}
                   transition={{ duration: 0.3 }}
                 >
@@ -229,3 +229,4 @@ const Navbar = ({ showHomeButton = false }) => {
 };
 
 export default Navbar;
+
