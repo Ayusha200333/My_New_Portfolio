@@ -52,6 +52,5 @@ I’m **Ayusha Wijerathna**, a Computer Science undergraduate at IJSE with a str
 
 ---
 
-git clone - https://github.com/Ayusha200333/My_New_Portfolio
----
+git clone - https://github.com/Ayusha200333/My_New_Portfolio 
 Vercel link - https://my-new-portfolio-seven-rouge.vercel.app/
