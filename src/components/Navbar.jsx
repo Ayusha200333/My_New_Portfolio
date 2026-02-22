@@ -96,7 +96,7 @@ const Navbar = ({ showHomeButton = false }) => {
               transition={{ duration: 0.3 }}
             >
               <a
-                href="/Ayusha Wijerathna.pdf.pdf" 
+                href="/Ayusha Wijerathna.pdf" 
                 download
                 className="ml-4 flex items-center gap-2 px-5 py-2.5 bg-gradient-to-r from-blue-600 to-purple-600 text-white rounded-full font-semibold hover:shadow-lg hover:shadow-blue-500/25 transition-all duration-300 group relative overflow-hidden"
               >
